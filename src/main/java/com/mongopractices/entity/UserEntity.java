@@ -10,16 +10,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserEntity {
 
     @Id
-    private Object id;
+    private ObjectId id;
     private String userName;
     private String email;
 
 
-    public Object getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 

@@ -1,24 +1,25 @@
 package com.mongopractices.entity;
 
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "product")
+@Document(collection = "products")
 public class ProductEntity {
 
     @Id
-    private Object id;
+    private ObjectId id;
     private String productName;
     private String productDes;
     private Double price;
 
 
-    public Object getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 

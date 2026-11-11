@@ -5,38 +5,37 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "order")
+@Document(collection = "orders")
 public class OrderEntity {
 
     @Id
-    private Object id;
-    private Object userId;
-    private Object productId;
+    private ObjectId id;
+    private ObjectId userId;
+    private ObjectId productId;
     private Integer quantity;
     private Double totalPrice;
 
-
-    public Object getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
-    public Object getUserId() {
+    public ObjectId getUserId() {
         return userId;
     }
 
-    public void setUserId(Object userId) {
+    public void setUserId(ObjectId userId) {
         this.userId = userId;
     }
 
-    public Object getProductId() {
+    public ObjectId getProductId() {
         return productId;
     }
 
-    public void setProductId(Object productId) {
+    public void setProductId(ObjectId productId) {
         this.productId = productId;
     }
 
